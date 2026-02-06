@@ -9,7 +9,7 @@
 
 
 
-TEaam
+## Team
 FLores, gian
 Natividad, James
 Cayetano, James 
