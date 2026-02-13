@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - DentalCare</title>
+    <style>
+        body {
+            font-family: 'Inter', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefefe; /* Very light cream */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fefefe;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #556b2f; /* Olive green */
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #556b2f;
+        }
+        .appointment-page {
+            padding: 60px 0;
+        }
+        .appointment-page h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #556b2f;
+        }
+        .dentist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .dentist-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .dentist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .dentist-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #556b2f;
+        }
+        .dentist-card p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .availability {
+            margin-bottom: 20px;
+        }
+        .availability h4 {
+            font-size: 18px;
+            color: #556b2f;
+            margin-bottom: 10px;
+        }
+        .availability ul {
+            list-style: none;
+            padding: 0;
+        }
+        .availability li {
+            background-color: #f9f9f9;
+            padding: 8px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .btn {
+            background-color: #556b2f;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #4a5d23;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 20px;
+            }
+            nav ul li {
+                margin-left: 20px;
+            }
+            .appointment-page h1 {
+                font-size: 28px;
+            }
+            .dentist-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">DentalCare</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#appointment">Appointment Page</a></li>
+                        <!-- Approval Status hidden until appointment submitted -->
+                        <li><a href="#logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="appointment-page">
+        <div class="container">
+            <h1>Book Your Dental Appointment</h1>
+            <p style="text-align: center; margin-bottom: 40px; color: #666;">Select a dentist from the list below to view their details and book an appointment.</p>
+            <div class="dentist-grid">
+                <!-- Dentist Card 1 -->
+                <div class="dentist-card">
+                    <h3>Dr. Emily Johnson</h3>
+                    <p><strong>Specialization:</strong> General Dentistry</p>
+                    <div class="availability">
+                        <h4>Available This Week</h4>
+                        <ul>
+                            <li>Monday: 9:00 AM - 12:00 PM</li>
+                            <li>Wednesday: 2:00 PM - 5:00 PM</li>
+                            <li>Friday: 10:00 AM - 1:00 PM</li>
+                        </ul>
+                    </div>
+                    <a href="#dentist-detail-1" class="btn">View Details</a>
+                </div>
+                <!-- Dentist Card 2 -->
+                <div class="dentist-card">
+                    <h3>Dr. Michael Lee</h3>
+                    <p><strong>Specialization:</strong> Orthodontics</p>
+                    <div class="availability">
+                        <h4>Available This Week</h4>
+                        <ul>
+                            <li>Tuesday: 11:00 AM - 2:00 PM</li>
+                            <li>Thursday: 3:00 PM - 6:00 PM</li>
+                            <li>Saturday: 9:00 AM - 12:00 PM</li>
+                        </ul>
+                    </div>
+                    <a href="#dentist-detail-2" class="btn">View Details</a>
+                </div>
+                <!-- Dentist Card 3 -->
+                <div class="dentist-card">
+                    <h3>Dr. Sarah Patel</h3>
+                    <p><strong>Specialization:</strong> Oral Surgery</p>
+                    <div class="availability">
+                        <h4>Available This Week</h4>
+                        <ul>
+                            <li>Monday: 1:00 PM - 4:00 PM</li>
+                            <li>Wednesday: 9:00 AM - 12:00 PM</li>
+                            <li>Friday: 2:00 PM - 5:00 PM</li>
+                        </ul>
+                    </div>
+                    <a href="#dentist-detail-3" class="btn">View Details</a>
+                </div>
+                <!-- Add more dentist cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dentist Detail Sections (Hidden by default, can be shown via JS or separate pages) -->
+    <section id="dentist-detail-1" class="dentist-detail" style="display: none; padding: 60px 0; background-color: #f9f9f9;">
+        <div class="container">
+            <h2>Dr. Emily Johnson</h2>
+            <p><strong>Credentials:</strong> DDS, 10+ years experience</p>
+            <p><strong>Specialization:</strong> General Dentistry</p>
+            <p><strong>Description:</strong> Dedicated to providing comprehensive dental care with a focus on patient comfort.</p>
+            <h4>Available Schedule</h4>
+            <ul>
+                <li>Monday: 9:00 AM - 12:00 PM</li>
+                <li>Wednesday: 2:00 PM - 5:00 PM</li>
+                <li>Friday: 10:00 AM - 1:00 PM</li>
+            </ul>
+            <a href="#register-appointment" class="btn">Register Appointment</a>
+        </div>
+    </section>
+    <!-- Similar sections for other dentists -->
+
+</body>
+</html>

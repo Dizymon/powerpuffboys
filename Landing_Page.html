@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalCare - Book Your Dental Appointment Online</title>
+    <style>
+        body {
+            font-family: 'Inter', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefefe; /* Very light cream */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fefefe;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #556b2f; /* Olive green */
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #556b2f;
+        }
+        .hero {
+            background: linear-gradient(135deg, #fefefe 0%, #f0f0f0 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #556b2f;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            background-color: #556b2f;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #4a5d23;
+        }
+        .info-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        .info-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #556b2f;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .info-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #fefefe;
+        }
+        .info-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #556b2f;
+        }
+        .cta-section {
+            background-color: #556b2f;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #f0f0f0;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 20px;
+            }
+            nav ul li {
+                margin-left: 20px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">DentalCare</div>
+                <nav>
+                    <ul>
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to DentalCare</h1>
+            <p>Book your dental appointments online with ease. Connect with licensed dentists and manage your oral health conveniently from home.</p>
+            <a href="#login" class="btn">Login to Book an Appointment</a>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="container">
+            <h2>How It Works & Benefits</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Easy Booking</h3>
+                    <p>Browse available dentists, view their specializations and schedules, and book appointments in just a few clicks.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Professional Care</h3>
+                    <p>Access licensed dentists across various specializations, ensuring you get the right care for your dental needs.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Convenient Management</h3>
+                    <p>Track your appointment requests, receive approvals, and manage your dental health history all in one place.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Time-Saving</h3>
+                    <p>Avoid long waits on the phone. Book online at your convenience and receive instant confirmations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Schedule Your Dental Visit?</h2>
+            <p>Join thousands of patients who trust DentalCare for their oral health needs.</p>
+            <a href="#login" class="btn">Get Started Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Contact Us: info@dentalcare.com | Phone: (123) 456-7890</p>
+            <p>&copy; 2023 DentalCare. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

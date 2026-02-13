@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentist Dashboard - DentalCare</title>
+    <style>
+        body {
+            font-family: 'Inter', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefefe; /* Very light cream */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fefefe;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #556b2f; /* Olive green */
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #556b2f;
+        }
+        .dashboard {
+            padding: 60px 0;
+        }
+        .dashboard h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #556b2f;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .dashboard-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .dashboard-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #556b2f;
+        }
+        .dashboard-card p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .btn {
+            background-color: #556b2f;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #4a5d23;
+        }
+        .summary {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .summary h2 {
+            font-size: 28px;
+            color: #556b2f;
+            margin-bottom: 20px;
+        }
+        .summary-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            min-width: 150px;
+        }
+        .stat h4 {
+            font-size: 18px;
+            color: #556b2f;
+            margin-bottom: 10px;
+        }
+        .stat p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 20px;
+            }
+            nav ul li {
+                margin-left: 20px;
+            }
+            .dashboard h1 {
+                font-size: 28px;
+            }
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            .summary-stats {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">DentalCare</div>
+                <nav>
+                    <ul>
+                        <li><a href="#pending">Pending Registrations</a></li>
+                        <li><a href="#manage">Manage Appointments</a></li>
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="dashboard">
+        <div class="container">
+            <h1>Welcome to Your Dentist Dashboard</h1>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Pending Appointment Registrations</h3>
+                    <p>Review and manage incoming patient appointment requests. Approve or reject based on your availability.</p>
+                    <a href="#pending" class="btn">View Pending Requests</a>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Manage Appointments</h3>
+                    <p>Create, update, or delete your available appointment slots. Keep your schedule organized and up-to-date.</p>
+                    <a href="#manage" class="btn">Manage Slots</a>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Dentist Profile</h3>
+                    <p>Update your professional credentials, specialization, and profile details to reflect on patient listings.</p>
+                    <a href="#profile" class="btn">Edit Profile</a>
+                </div>
+            </div>
+            <div class="summary">
+                <h2>Quick Overview</h2>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <h4>Pending Requests</h4>
+                        <p>5</p> <!-- Placeholder; in real app, this would be dynamic -->
+                    </div>
+                    <div class="stat">
+                        <h4>Upcoming Appointments</h4>
+                        <p>12</p> <!-- Placeholder -->
+                    </div>
+                    <div class="stat">
+                        <h4>Available Slots</h4>
+                        <p>8</p> <!-- Placeholder -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
