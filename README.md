@@ -1,14 +1,14 @@
 ## Digital Medical Appointment System
 
 
-## features
+## FEATURES
 - User Account Management
 - Appointment Scheduling
 - Medical Records
 - System Monitoring
 
 
-## TEch Stack
+## Tech Stack
 Frontend: CSS, HTML
 Backend: Python (using flask framework)
 Database
